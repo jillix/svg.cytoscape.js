@@ -20,5 +20,12 @@ window.addEventListener("load", function () {
                 }
             }
         }
+      , lines: {
+            "node_a__node_b": {
+                source: "node_a"
+              , target: "node_b"
+              , id: "node_a__node_b"
+             }
+        }
     });
 });
