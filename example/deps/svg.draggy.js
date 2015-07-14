@@ -30,7 +30,7 @@
 
             // Start dragging
             start = function(event) {
-                var parent = this.parent._parent(SVG.Nested) || this._parent(SVG.Doc);
+                var parent = this.parent(SVG.Nested) || this.parent(SVG.Doc);
                 event = event || window.event;
 
                 // Invoke any callbacks
@@ -94,7 +94,7 @@
 
             function elmZoom(elm) {
                 if (!elm || typeof elm.transform !== "function") { return { x: 1, y: 1 }; }
-                var p = elm.parent;
+                var p = elm.parent();
                 var t = elm.transform();
                 pz = {};
                 var pz = elmZoom(p);
