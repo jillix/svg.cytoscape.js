@@ -30,4 +30,10 @@ window.addEventListener("load", function () {
              }
         }
     });
+
+    cyto.on("addElement", function (data) {
+        cyto.connect(data.source, cyto.addElement({
+            name: Math.random().toString()
+        }));
+    });
 });
