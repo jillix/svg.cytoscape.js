@@ -1,5 +1,7 @@
 window.addEventListener("load", function () {
     var cyto = new Cytoscape(".graph", {
+        toolbox: ".toolbox"
+    }, {
         nodes: {
             "node_a": {
                 name: "A"
