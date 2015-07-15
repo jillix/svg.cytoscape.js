@@ -36,4 +36,8 @@ window.addEventListener("load", function () {
             name: Math.random().toString()
         }));
     });
+
+    cyto.on("connectElements", function (s, t) {
+        cyto.connect(s, t);
+    });
 });
