@@ -3,3 +3,24 @@ body, html, .graph {
     height: 100%;
     width: 100%;
 }
+
+.toolbox {
+    position: fixed;
+    background-color: rgba(0, 143, 222, 0.42);
+    top: 10px;
+    right: 10px;
+    padding: 4px;
+    border-radius: 4px;
+    font-family: "Arial";
+}
+
+.toolbox > div {
+    background: rgba(255, 255, 255, 0.74);
+    padding: 13px;
+    display: inline-block;
+    margin: 4px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    border-radius: 100%;
+}
