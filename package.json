@@ -1,0 +1,32 @@
+{
+  "name": "svg.cytoscape.js",
+  "version": "1.0.0",
+  "description": "Create cytoscape environments in SVG.",
+  "main": "lib/svg.cytoscape.js",
+  "contributors": [
+    "Ionica Bizau <bizauionica@gmail.com>"
+  ],
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jillix/svg.cytoscape.js.git"
+  },
+  "keywords": [
+    "cytoscape",
+    "svg",
+    "graph",
+    "drag",
+    "drop"
+  ],
+  "author": "jillix <contact@jillix.com>",
+  "license": "Proprietary",
+  "bugs": {
+    "url": "https://github.com/jillix/svg.cytoscape.js/issues"
+  },
+  "homepage": "https://github.com/jillix/svg.cytoscape.js"
+}
