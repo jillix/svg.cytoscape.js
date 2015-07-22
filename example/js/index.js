@@ -33,6 +33,17 @@ window.addEventListener("load", function () {
               , id: "node_a"
               , icon: "&#10084;"
               , color: "#009EDF"
+              , subelms: {
+                    esube: {
+                        label: "External SubElement"
+                      , icon: "&#10052;"
+                    }
+                  , isube: {
+                        label: "Internal SubElement"
+                      , icon: "&#10052;"
+                      , internal: true
+                    }
+                }
             }
           , "node_b": {
                 name: "And we love open-source"
@@ -66,8 +77,6 @@ window.addEventListener("load", function () {
           , color: flatColors[Math.floor(Math.random() * flatColors.length)]
         }).setPosition(120, 200);
     }, 4000)
-
-
 
     cyto.on("addElement", function (data) {
         var newElm = cyto.addElement({
