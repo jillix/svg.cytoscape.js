@@ -13,7 +13,7 @@
 <!-- * * * Thanks! * * *                                                    -->
 <!---------------------------------------------------------------------------->
 
-# svg.cytoscape.js
+# svg.cytoscape.js [![Donate now][donate-now]][paypal-donations]
 
 Create cytoscape environments in SVG.
 
@@ -22,6 +22,9 @@ Create cytoscape environments in SVG.
 ```sh
 $ npm i svg.cytoscape.js
 ```
+
+## Press Highlights
+None yet. If you wrote or found an article about this project, [add it][contributing] in this section.  :memo:
 
 ## Documentation
 
@@ -60,13 +63,13 @@ Creates a new instance of elements graph.
  - `dNodes` (SVG Element): The container where the draggable nodes will be appended.
  - `cNodes` (SVG Element): The container where the connectable nodes will be appended.
  - `lines` (SVG Element): The container where the lines will be appended.
+ - `cytoscape` (Cytoscape): The cytoscape instance.
 
 #### Return
 - **SVGGraph** The `SVGGraph` instance.
 
-### `add(options)`
+### `add(options, The)`
 Adds a new element: Instance, Model or View.
-TODO **Needs refactoring :: `prototype`**
 
 #### Params
 - **Object** `options`: An object containing the following fields:
@@ -74,16 +77,19 @@ TODO **Needs refactoring :: `prototype`**
  - `color` (String): The color that should be used.
  - `domains` (Array): An array with the domains.
  - `icon` (String): The element icon.
+- **Object** `The`: raw element data.
 
 #### Return
 - **Object** An object containing the following fields:
  - `dRadius` (Number): The circle radius.
  - `setColor` (Function): A function to set the color.
+ - `resetColor` (Function): A function to reset the color.
  - `position` (Object): The position object.
  - `cElm` (SVGElement): The connectable SVG element.
  - `subelms` (Array): An array with the subelements.
  - `addSubElm` (Function): A function to add new subelements.
  - `connect` (Function): A function to connect the element with other (sub)element.
+ - `raw` (Object) The raw element data.
 
 ### `setColor(col)`
 Sets the color of the element.
@@ -91,7 +97,10 @@ Sets the color of the element.
 #### Params
 - **String** `col`: The color to set.
 
-### `addSubElm(data)`
+### `resetColor()`
+Resets the line colors.
+
+### `addSubElm(data, The)`
 Adds a subelement to the element.
 
 #### Params
@@ -99,13 +108,20 @@ Adds a subelement to the element.
  - `label` (String): The subelement label.
  - `type` (String): An optional subelement type (`l|m|s`).
  - `icon` (String): An optional icon.
+ - `classes` (Array): An array with custom classes added to the circle element.
+- **Object** `The`: raw element data.
 
 #### Return
 - **Object** The subelement that was added:
+ - `resetColor` (Function): A function to reset the color.
  - `text` (SVGElement): The text SVG element.
  - `cElm` (SVGElement): The connectable SVG element.
  - `circle` (SVGElement): The circle element.
  - `connect` (Function): A function to connect the element with other (sub)element.
+ - `raw` (Object) The raw element data.
+
+### `resetColor()`
+Resets the line colors.
 
 ### `connect(options, elm2)`
 Connects the **subelement** to another element.
@@ -218,6 +234,11 @@ Creates a new cytoscape element.
 
 #### Params
 - **Object** `elm`: An object containing the following fields:
+ - pos (Object): The position object.
+ - id (String): An optional id.
+ - icon (HTML): The icon.
+ - color (String): An optional color.
+ - subelms (Object): An object with subelements.
 
 #### Return
 - **CElement** The cytoscape element instance.
@@ -233,8 +254,12 @@ Updates the element position.
 Have an idea? Found a bug? See [how to contribute][contributing].
 
 ## License
-See the [LICENSE][license] file.
+[KINDLY][license] © [Ionică Bizău][website]–The [LICENSE](/LICENSE) file contains
+a copy of the license.
 
-[license]: /LICENSE
+[license]: http://ionicabizau.github.io/kindly-license/?author=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica@gmail.com%3E&year=2015
 [contributing]: /CONTRIBUTING.md
+[website]: http://ionicabizau.net
 [docs]: /DOCUMENTATION.md
+[paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MG98D7NPFZ3MG
+[donate-now]: http://i.imgur.com/jioicaN.png
