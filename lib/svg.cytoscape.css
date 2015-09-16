@@ -2,3 +2,6 @@ text { text-anchor: middle; }
 .c-element text {
     font-size: 23px;
 }
+.subelement text, .c-element text {
+    cursor: default;
+}
