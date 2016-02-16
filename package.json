@@ -23,10 +23,37 @@
     "drag",
     "drop"
   ],
-  "author": "jillix <contact@jillix.com>",
-  "license": "Proprietary",
+  "author": "jillix <contact@jillix.com> (http://jillix.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jillix/svg.cytoscape.js/issues"
   },
-  "homepage": "https://github.com/jillix/svg.cytoscape.js"
+  "homepage": "https://github.com/jillix/svg.cytoscape.js",
+  "blah": {
+      "documentation": [
+          { "h3": "Events" },
+          {
+              "h4": "`self.cytoscape`"
+          },
+          {
+              "ul": [
+                  "**elementDragend** (drGroup, ev)",
+                  "*elementMouseEnter** (newElm)",
+                  "*elementMouseLeave** (newElm)",
+                  "*subelementMouseEnter** (data, newElm, this)",
+                  "*subelementMouseLeave** (data, newElm, this)"
+              ]
+          },
+          {
+              "h4": "`self`"
+          },
+          {
+              "ul": [
+                  "**addElement**",
+                  "**elementClicked** (source, svgLineJs.source)",
+                  "**connectElements** (source, target)"
+              ]
+          }
+      ]
+  }
 }
