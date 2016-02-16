@@ -234,10 +234,10 @@ Updates the element position.
 #### `self.cytoscape`
 
  - **elementDragend** (drGroup, ev)
- - *elementMouseEnter** (newElm)
- - *elementMouseLeave** (newElm)
- - *subelementMouseEnter** (data, newElm, this)
- - *subelementMouseLeave** (data, newElm, this)
+ - **elementMouseEnter** (newElm)
+ - **elementMouseLeave** (newElm)
+ - **subelementMouseEnter** (data, newElm, this)
+ - **subelementMouseLeave** (data, newElm, this)
 
 #### `self`
 
